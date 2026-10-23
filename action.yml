@@ -81,8 +81,7 @@ runs:
         cd ${{ github.workspace }}
         echo "${PWD}"
         ls -l 
-        docker build \
-          --pull \
+        docker build --pull \
           --build-arg NODE_ENV=${NODE_ENV} \
           --build-arg NEW_RELIC_LICENSE_KEY=${{ inputs.new_relic_license }} \
           --build-arg NEW_RELIC_APP_NAME=${{ inputs.service_name }}-${{ inputs.stage }} \
